@@ -11,7 +11,7 @@ const btnDestroy = document.querySelector("[data-destroy]");
 const boxContainer = document.getElementById("boxes");
 
 btnDestroy.addEventListener("click", () => {
-  boxContainer.remove();
+  boxContainer.innerHTML = '';
   input.value = "";
 });
 
