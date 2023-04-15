@@ -8,11 +8,16 @@ form.addEventListener("submit", (evt) => {
   } = evt.currentTarget;
  
 
-  if (email.value === "" || password.value === "") {
-    alert("Будь ласка, заповніть всі поля");
+  if (email.value.trim() === "" || password.value.trim() === "") {
+    return alert("Будь ласка, заповніть всі поля");
   };
 
-  console.log(`Email: ${email.value} Password: ${password.value}`);
+  const formObj = {
+    email: email.value,
+    password: password.value
+    };
 
-  form.reset();
+  console.log(formObj);
+
+  evt.target.reset();
 });
